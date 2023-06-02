@@ -1,0 +1,42 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <xs:element name="imdb_movies">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="imdb_movie" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="imdb_title_id" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="title" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="original_title" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:short" name="year" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="date_published" minOccurs="1" maxOccurs="1">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="(0?[1-9]|1[0-2])/(0?[1-9]|[12]\d|30|31)/(\d{4}|\d{2})"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element type="xs:string" name="genre" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:short" name="duration" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="country" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="language" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="director" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="writer" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="production_company" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="actors" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="description" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:decimal" name="avg_vote" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:integer" name="votes" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="budget" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="usa_gross_income" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="worldwide_gross_income" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:short" name="metascore" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:integer" name="reviews_users" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:integer" name="reviews_critics" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+</xs:schema>

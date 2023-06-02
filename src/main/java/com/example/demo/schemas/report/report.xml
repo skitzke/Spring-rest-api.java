@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<reports>
+    <report>
+        <country>Switzerland</country>
+        <happiness_rank>1</happiness_rank>
+        <happiness_score>6.231</happiness_score>
+        <economy>1.31234</economy>
+        <family>3.23125</family>
+        <health>0.31240</health>
+        <freedom>0.59439</freedom>
+        <trust>0.85742</trust>
+        <generosity>1.34848</generosity>
+    </report>
+</reports>

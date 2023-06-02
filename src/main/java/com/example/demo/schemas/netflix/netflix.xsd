@@ -1,0 +1,46 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <xs:element name="netflix_movies">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="netflix_movie" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:integer" name="show_id" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="type" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="title" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="director" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="cast" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="country" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="date_added" minOccurs="1" maxOccurs="1">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="(0?[1-9]|[12]\d|30|31)-[A-Z][a-z][a-z]-[0-9][0-9]"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element type="xs:short" name="release_year" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="rating" minOccurs="1" maxOccurs="1">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="TV-Y" />
+                                                    <xs:enumeration value="TV-Y7" />
+                                                    <xs:enumeration value="TV-G" />
+                                                    <xs:enumeration value="PG"/>
+                                                    <xs:enumeration value="TV-PG"/>
+                                                    <xs:enumeration value="PG-13"/>
+                                                    <xs:enumeration value="TV-14"/>
+                                                    <xs:enumeration value="TV-MA"/>
+                                                    <xs:enumeration value="NC-17"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element type="xs:string" name="duration" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="listed_in" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:string" name="description" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+</xs:schema>

@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IMDB",
+  "description": "Every movie description and characteristics in IMDB",
+  "type": "object",
+  "properties": {
+    "imdb_title_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "original_title": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer",
+      "minLength": 4
+    },
+    "date_published": {
+      "type": "string",
+      "pattern": "(0?[1-9]|1[0-2])/(0?[1-9]|[12]\\d|30|31)/(\\d{4}|\\d{2})"
+    },
+    "genre": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "country": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "director": {
+      "type": "string"
+    },
+    "writer": {
+      "type": "string"
+    },
+    "production_company": {
+      "type": "string"
+    },
+    "actors": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "avg_vote": {
+      "type": "number"
+    },
+    "votes": {
+      "type": "integer"
+    },
+    "budget": {
+      "type": "string"
+    },
+    "usa_gross_income": {
+      "type": "string"
+    },
+    "worldwide_gross_income": {
+      "type": "string"
+    },
+    "metascore": {
+      "type": "integer"
+    },
+    "reviews_users": {
+      "type": "integer"
+    },
+    "reviews_critics": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "imdb_title_id",
+    "title",
+    "original_title",
+    "year",
+    "date_published",
+    "genre",
+    "duration",
+    "country",
+    "language",
+    "director",
+    "writer",
+    "production_company",
+    "actors",
+    "description",
+    "avg_vote",
+    "votes",
+    "budget",
+    "usa_gross_income",
+    "worldwide_gross_income",
+    "metascore",
+    "reviews_users",
+    "reviews_critics"
+  ]
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imdb_movies>
+        <imdb_movie>
+            <imdb_title_id>tt30040</imdb_title_id>
+            <title>Spiderman</title>
+            <original_title>Spiderman</original_title>
+            <year>2015</year>
+            <date_published>1/23/2015</date_published>
+            <genre>Action, Adventure</genre>
+            <duration>113</duration>
+            <country>America</country>
+            <language>English</language>
+            <director>Ridley Scott</director>
+            <writer>Ashley Writer</writer>
+            <production_company>Colombia Pictures</production_company>
+            <actors>Sean Gray, Chris Blasman, Renee Dorian, Michael Buffo, Amanda Wing</actors>
+            <description>A very cool movie</description>
+            <avg_vote>4.2</avg_vote>
+            <votes>26832</votes>
+            <budget>$23932</budget>
+            <usa_gross_income>$42,323,210</usa_gross_income>
+            <worldwide_gross_income>$2,133,419</worldwide_gross_income>
+            <metascore>85</metascore>
+            <reviews_users>635</reviews_users>
+            <reviews_critics>154</reviews_critics>
+        </imdb_movie>
+</imdb_movies>

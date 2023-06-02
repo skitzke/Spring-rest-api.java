@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Netflix",
+  "description": "Information on every movie in Netflix",
+  "type": "object",
+  "properties": {
+    "show_id": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "director": {
+      "type": "string"
+    },
+    "cast": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "date_added": {
+      "type": "string",
+      "pattern": "(0?[1-9]|[12]\\d|30|31)-[A-Z][a-z][a-z]-[0-9][0-9]"
+    },
+    "release_year": {
+      "type": "integer",
+      "minLength": 4
+    },
+    "rating": {
+      "type": "string",
+      "enum": ["TV-Y","TV-Y7","G","TV-G","PG","TV-PG","PG-13","TV-14","R","TV-MA","NC-17"]
+    },
+    "duration": {
+      "type": "string"
+    },
+    "listed_in": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "show_id",
+    "type",
+    "title",
+    "director",
+    "cast",
+    "country",
+    "date_added",
+    "release_year",
+    "rating",
+    "duration",
+    "listed_in",
+    "description"
+  ]
+}
+

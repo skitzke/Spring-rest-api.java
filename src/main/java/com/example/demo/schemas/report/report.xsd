@@ -1,0 +1,23 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                <xs:element name="reports">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="report" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="country" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:short" name="happiness_rank" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:double" name="happiness_score" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:double" name="economy" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:double" name="family" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:double" name="health" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:double" name="freedom" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:double" name="trust" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element type="xs:double" name="generosity" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+</xs:schema>

@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Report",
+  "description": "Report for the happiness and social life per country ",
+  "properties": {
+    "country": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "family": {
+      "type": "number"
+    },
+    "trust": {
+      "type": "number"
+    },
+    "health": {
+      "type": "number"
+    },
+    "economy": {
+      "type": "number"
+    },
+    "freedom": {
+      "type": "number"
+    },
+    "happiness_Score": {
+      "type": "number"
+    },
+    "generosity": {
+      "type": "number"
+    },
+    "happiness_Rank": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 158
+    }
+  },
+  "required": [
+    "country",
+    "region",
+    "family",
+    "trust",
+    "health",
+    "economy",
+    "freedom",
+    "happiness_Score",
+    "generosity",
+    "happiness_Rank"
+  ],
+  "additionalProperties": false
+}

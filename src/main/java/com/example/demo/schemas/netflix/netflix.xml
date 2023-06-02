@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netflix_movies>
+    <netflix_movie>
+        <show_id>81388319</show_id>
+        <type>TV Show</type>
+        <title>Maradona in Mexico</title>
+        <director>Sam Philips</director>
+        <cast>Diego Armando Maradona</cast>
+        <country>Argentina, United States, Mexico</country>
+        <date_added>23-Nov-19</date_added>
+        <release_year>2020</release_year>
+        <rating>TV-MA</rating>
+        <duration>1 Season</duration>
+        <listed_in>Docuseries, Spanish-Language TV Shows</listed_in>
+        <description>In this docuseries, soccer great Diego Maradona comes to Culiacán, the...</description>
+    </netflix_movie>
+</netflix_movies>
