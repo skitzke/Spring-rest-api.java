@@ -1,4 +1,4 @@
-package com.example.demo.model.report;
+package com.example.demo.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -6,8 +6,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "2015_report")
-@Document(collection = "2015_report")
+@XmlRootElement(name = "report")
+@Document(collection = "report")
 public class Report {
     @Id
     private String id;
@@ -21,22 +21,24 @@ public class Report {
     private double Freedom;
     private double Trust;
     private double Generosity;
+    private int year;  // Added field to store the year
 
     public Report() {
         super();
     }
 
-    public Report(String id, String country, int happiness_Rank, double happiness_Score, double economy, double family, double health, double freedom, double trust, double generosity) {
-        id = id;
-        Country = country;
-        Happiness_Rank = happiness_Rank;
-        Happiness_Score = happiness_Score;
-        Economy = economy;
-        Family = family;
-        Health = health;
-        Freedom = freedom;
-        Trust = trust;
-        Generosity = generosity;
+    public Report(String id, String country, int happiness_Rank, double happiness_Score, double economy, double family, double health, double freedom, double trust, double generosity, int year) {
+        this.id = id;
+        this.Country = country;
+        this.Happiness_Rank = happiness_Rank;
+        this.Happiness_Score = happiness_Score;
+        this.Economy = economy;
+        this.Family = family;
+        this.Health = health;
+        this.Freedom = freedom;
+        this.Trust = trust;
+        this.Generosity = generosity;
+        this.year = year;
     }
 
     public String getId() {
@@ -51,7 +53,7 @@ public class Report {
     }
 
     public void setCountry(String country) {
-        Country = country;
+        this.Country = country;
     }
 
     public int getHappiness_Rank() {
@@ -59,7 +61,7 @@ public class Report {
     }
 
     public void setHappiness_Rank(int happiness_Rank) {
-        Happiness_Rank = happiness_Rank;
+        this.Happiness_Rank = happiness_Rank;
     }
 
     public double getHappiness_Score() {
@@ -67,7 +69,7 @@ public class Report {
     }
 
     public void setHappiness_Score(double happiness_Score) {
-        Happiness_Score = happiness_Score;
+        this.Happiness_Score = happiness_Score;
     }
 
     public double getEconomy() {
@@ -75,7 +77,7 @@ public class Report {
     }
 
     public void setEconomy(double economy) {
-        Economy = economy;
+        this.Economy = economy;
     }
 
     public double getFamily() {
@@ -83,7 +85,7 @@ public class Report {
     }
 
     public void setFamily(double family) {
-        Family = family;
+        this.Family = family;
     }
 
     public double getHealth() {
@@ -91,7 +93,7 @@ public class Report {
     }
 
     public void setHealth(double health) {
-        Health = health;
+        this.Health = health;
     }
 
     public double getFreedom() {
@@ -99,7 +101,7 @@ public class Report {
     }
 
     public void setFreedom(double freedom) {
-        Freedom = freedom;
+        this.Freedom = freedom;
     }
 
     public double getTrust() {
@@ -107,7 +109,7 @@ public class Report {
     }
 
     public void setTrust(double trust) {
-        Trust = trust;
+        this.Trust = trust;
     }
 
     public double getGenerosity() {
@@ -115,7 +117,14 @@ public class Report {
     }
 
     public void setGenerosity(double generosity) {
-        Generosity = generosity;
+        this.Generosity = generosity;
     }
 
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
 }
