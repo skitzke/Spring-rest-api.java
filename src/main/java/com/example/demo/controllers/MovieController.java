@@ -2,31 +2,29 @@ package com.example.demo.controllers;
 
 import com.example.demo.model.Movie;
 import com.example.demo.service.MovieService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
-@RequestMapping("/movies")
+@RequestMapping("/api/movies")
 public class MovieController {
 
-    private final MovieService movieService;
+    @Autowired
+    private MovieService movieService;
 
-    public MovieController(MovieService movieService) {
-        this.movieService = movieService;
+    @PostMapping("/add")
+    public ResponseEntity<Movie> addMovie(@Valid @RequestBody Movie movie) {
+        movieService.saveMovie(movie);
+        return ResponseEntity.ok(movie);
     }
 
-    @PostMapping
-    public ResponseEntity<?> createMovie(@Valid @RequestBody Movie movie, BindingResult result) {
-        if (result.hasErrors()) {
-            return ResponseEntity.badRequest().body(result.getAllErrors());
-        }
-        movieService.saveMovie(movie);
-        return ResponseEntity.ok("Movie created successfully");
+    @GetMapping("/list")
+    public ResponseEntity<List<Movie>> listMovies() {
+        List<Movie> movies = movieService.getAllMovies();
+        return ResponseEntity.ok(movies);
     }
 }
